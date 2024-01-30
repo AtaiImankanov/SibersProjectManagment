@@ -1,0 +1,17 @@
+D:\Projects\mvc\ProjectsTrackerSibers\ProjectsTrackerSibers.DAL\bin\Debug\net8.0\ProjectsTrackerSibers.DAL.deps.json
+D:\Projects\mvc\ProjectsTrackerSibers\ProjectsTrackerSibers.DAL\bin\Debug\net8.0\ProjectsTrackerSibers.DAL.dll
+D:\Projects\mvc\ProjectsTrackerSibers\ProjectsTrackerSibers.DAL\bin\Debug\net8.0\ProjectsTrackerSibers.DAL.pdb
+D:\Projects\mvc\ProjectsTrackerSibers\ProjectsTrackerSibers.DAL\bin\Debug\net8.0\ProjectsTrackerSibers.Domain.dll
+D:\Projects\mvc\ProjectsTrackerSibers\ProjectsTrackerSibers.DAL\bin\Debug\net8.0\ProjectsTrackerSibers.Domain.pdb
+D:\Projects\mvc\ProjectsTrackerSibers\ProjectsTrackerSibers.DAL\obj\Debug\net8.0\ProjectsTrackerSibers.DAL.csproj.AssemblyReference.cache
+D:\Projects\mvc\ProjectsTrackerSibers\ProjectsTrackerSibers.DAL\obj\Debug\net8.0\ProjectsTrackerSibers.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\mvc\ProjectsTrackerSibers\ProjectsTrackerSibers.DAL\obj\Debug\net8.0\ProjectsTrackerSibers.DAL.AssemblyInfoInputs.cache
+D:\Projects\mvc\ProjectsTrackerSibers\ProjectsTrackerSibers.DAL\obj\Debug\net8.0\ProjectsTrackerSibers.DAL.AssemblyInfo.cs
+D:\Projects\mvc\ProjectsTrackerSibers\ProjectsTrackerSibers.DAL\obj\Debug\net8.0\ProjectsTrackerSibers.DAL.csproj.CoreCompileInputs.cache
+D:\Projects\mvc\ProjectsTrackerSibers\ProjectsTrackerSibers.DAL\obj\Debug\net8.0\ProjectsTrackerSibers.DAL.csproj.CopyComplete
+D:\Projects\mvc\ProjectsTrackerSibers\ProjectsTrackerSibers.DAL\obj\Debug\net8.0\ProjectsTrackerSibers.DAL.dll
+D:\Projects\mvc\ProjectsTrackerSibers\ProjectsTrackerSibers.DAL\obj\Debug\net8.0\refint\ProjectsTrackerSibers.DAL.dll
+D:\Projects\mvc\ProjectsTrackerSibers\ProjectsTrackerSibers.DAL\obj\Debug\net8.0\ProjectsTrackerSibers.DAL.pdb
+D:\Projects\mvc\ProjectsTrackerSibers\ProjectsTrackerSibers.DAL\obj\Debug\net8.0\ref\ProjectsTrackerSibers.DAL.dll
+D:\Projects\mvc\ProjectsTrackerSibers\ProjectsTrackerSibers.DAL\bin\Debug\net8.0\ProjectsTrackerSibers.DAL.runtimeconfig.json
+D:\Projects\mvc\ProjectsTrackerSibers\ProjectsTrackerSibers.DAL\obj\Debug\net8.0\ProjectsTrackerSibers.DAL.genruntimeconfig.cache

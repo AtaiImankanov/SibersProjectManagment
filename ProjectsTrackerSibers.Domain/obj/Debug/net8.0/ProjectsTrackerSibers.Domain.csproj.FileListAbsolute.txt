@@ -1,0 +1,11 @@
+D:\Projects\mvc\ProjectsTrackerSibers\ProjectsTrackerSibers.Domain\bin\Debug\net8.0\ProjectsTrackerSibers.Domain.deps.json
+D:\Projects\mvc\ProjectsTrackerSibers\ProjectsTrackerSibers.Domain\bin\Debug\net8.0\ProjectsTrackerSibers.Domain.dll
+D:\Projects\mvc\ProjectsTrackerSibers\ProjectsTrackerSibers.Domain\bin\Debug\net8.0\ProjectsTrackerSibers.Domain.pdb
+D:\Projects\mvc\ProjectsTrackerSibers\ProjectsTrackerSibers.Domain\obj\Debug\net8.0\ProjectsTrackerSibers.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\mvc\ProjectsTrackerSibers\ProjectsTrackerSibers.Domain\obj\Debug\net8.0\ProjectsTrackerSibers.Domain.AssemblyInfoInputs.cache
+D:\Projects\mvc\ProjectsTrackerSibers\ProjectsTrackerSibers.Domain\obj\Debug\net8.0\ProjectsTrackerSibers.Domain.AssemblyInfo.cs
+D:\Projects\mvc\ProjectsTrackerSibers\ProjectsTrackerSibers.Domain\obj\Debug\net8.0\ProjectsTrackerSibers.Domain.csproj.CoreCompileInputs.cache
+D:\Projects\mvc\ProjectsTrackerSibers\ProjectsTrackerSibers.Domain\obj\Debug\net8.0\ProjectsTrackerSibers.Domain.dll
+D:\Projects\mvc\ProjectsTrackerSibers\ProjectsTrackerSibers.Domain\obj\Debug\net8.0\refint\ProjectsTrackerSibers.Domain.dll
+D:\Projects\mvc\ProjectsTrackerSibers\ProjectsTrackerSibers.Domain\obj\Debug\net8.0\ProjectsTrackerSibers.Domain.pdb
+D:\Projects\mvc\ProjectsTrackerSibers\ProjectsTrackerSibers.Domain\obj\Debug\net8.0\ref\ProjectsTrackerSibers.Domain.dll
