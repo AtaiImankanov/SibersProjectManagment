@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using ProjectsTrackerSibers.DAL.Interfaces;
 using ProjectsTrackerSibers.Models;
 using System.Diagnostics;
 
@@ -8,13 +9,14 @@ namespace ProjectsTrackerSibers.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IProjectRepository ProjectRepository)
         {
             _logger = logger;
         }
 
         public IActionResult Index()
         {
+
             return View();
         }
 

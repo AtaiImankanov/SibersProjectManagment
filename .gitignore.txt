@@ -10,3 +10,8 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
+
+# Игнор временныз файлов склайт
+*.db-shm
+*.db-wal
+*.mdb-wal

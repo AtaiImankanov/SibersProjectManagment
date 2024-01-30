@@ -13,4 +13,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ProjectsTrackerSibers.DAL\ProjectsTrackerSibers.DAL.csproj" />
+  </ItemGroup>
+
 </Project>

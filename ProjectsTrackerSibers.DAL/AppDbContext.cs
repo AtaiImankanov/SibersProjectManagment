@@ -5,18 +5,12 @@ namespace ProjectsTrackerSibers.DAL
 {
     public class AppDbContext : DbContext
     {
-        public AppDbContext(DbContextOptions<AppDbContext> options) : base (options) 
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
-           
         }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public AppDbContext()
         {
-            if (!optionsBuilder.IsConfigured)
-            {
-                optionsBuilder.UseSqlite("Data Source=ProjectManagmentDb.db");
-            }   
         }
-
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Project> Projects { get; set; }
         public DbSet<TaskProj> Tasks { get; set; }

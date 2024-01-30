@@ -15,3 +15,4 @@ D:\Projects\mvc\ProjectsTrackerSibers\ProjectsTrackerSibers.DAL\obj\Debug\net8.0
 D:\Projects\mvc\ProjectsTrackerSibers\ProjectsTrackerSibers.DAL\obj\Debug\net8.0\ref\ProjectsTrackerSibers.DAL.dll
 D:\Projects\mvc\ProjectsTrackerSibers\ProjectsTrackerSibers.DAL\bin\Debug\net8.0\ProjectsTrackerSibers.DAL.runtimeconfig.json
 D:\Projects\mvc\ProjectsTrackerSibers\ProjectsTrackerSibers.DAL\obj\Debug\net8.0\ProjectsTrackerSibers.DAL.genruntimeconfig.cache
+D:\Projects\mvc\ProjectsTrackerSibers\ProjectsTrackerSibers.DAL\obj\Debug\net8.0\ProjectsTrackerSibers.DAL.sourcelink.json
