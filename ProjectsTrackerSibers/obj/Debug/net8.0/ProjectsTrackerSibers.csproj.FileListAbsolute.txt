@@ -130,3 +130,5 @@ D:\Projects\mvc\ProjectsTrackerSibers\ProjectsTrackerSibers\bin\Debug\net8.0\Pro
 D:\Projects\mvc\ProjectsTrackerSibers\ProjectsTrackerSibers\bin\Debug\net8.0\ProjectsTrackerSibers.Domain.pdb
 D:\Projects\mvc\ProjectsTrackerSibers\ProjectsTrackerSibers\obj\Debug\net8.0\ProjectsTrackerSibers.csproj.AssemblyReference.cache
 D:\Projects\mvc\ProjectsTrackerSibers\ProjectsTrackerSibers\obj\Debug\net8.0\ProjectsTrackerSibers.sourcelink.json
+D:\Projects\mvc\ProjectsTrackerSibers\ProjectsTrackerSibers\bin\Debug\net8.0\ProjectsTrackerSiber.Service.dll
+D:\Projects\mvc\ProjectsTrackerSibers\ProjectsTrackerSibers\bin\Debug\net8.0\ProjectsTrackerSiber.Service.pdb

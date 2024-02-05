@@ -1016,6 +1016,20 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
+      "ProjectsTrackerSiber.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "ProjectsTrackerSibers.DAL": "1.0.0",
+          "ProjectsTrackerSibers.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ProjectsTrackerSiber.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProjectsTrackerSiber.Service.dll": {}
+        }
+      },
       "ProjectsTrackerSibers.DAL/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -2543,6 +2557,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "ProjectsTrackerSiber.Service/1.0.0": {
+      "type": "project",
+      "path": "../ProjectsTrackerSiber.Service/ProjectsTrackerSiber.Service.csproj",
+      "msbuildProject": "../ProjectsTrackerSiber.Service/ProjectsTrackerSiber.Service.csproj"
+    },
     "ProjectsTrackerSibers.DAL/1.0.0": {
       "type": "project",
       "path": "../ProjectsTrackerSibers.DAL/ProjectsTrackerSibers.DAL.csproj",
@@ -2557,6 +2576,7 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "Microsoft.EntityFrameworkCore.Design >= 8.0.1",
+      "ProjectsTrackerSiber.Service >= 1.0.0",
       "ProjectsTrackerSibers.DAL >= 1.0.0"
     ]
   },
@@ -2593,6 +2613,9 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
+            "D:\\Projects\\mvc\\ProjectsTrackerSibers\\ProjectsTrackerSiber.Service\\ProjectsTrackerSiber.Service.csproj": {
+              "projectPath": "D:\\Projects\\mvc\\ProjectsTrackerSibers\\ProjectsTrackerSiber.Service\\ProjectsTrackerSiber.Service.csproj"
+            },
             "D:\\Projects\\mvc\\ProjectsTrackerSibers\\ProjectsTrackerSibers.DAL\\ProjectsTrackerSibers.DAL.csproj": {
               "projectPath": "D:\\Projects\\mvc\\ProjectsTrackerSibers\\ProjectsTrackerSibers.DAL\\ProjectsTrackerSibers.DAL.csproj"
             }

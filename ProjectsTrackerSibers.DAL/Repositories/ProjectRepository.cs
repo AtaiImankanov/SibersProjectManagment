@@ -17,19 +17,25 @@ namespace ProjectsTrackerSibers.DAL.Repositories
         {
             _db = db;
         }
-        public Task<bool> Create(Project entity)
+        public async Task<bool> Create(Project entity)
         {
-            throw new NotImplementedException();
+        //TODO try catch(false)
+            await _db.Projects.AddAsync(entity);
+            await _db.SaveChangesAsync();
+            return true;
         }
 
-        public Task<bool> Delete(Project entity)
+        public async Task<bool> Delete(Project entity)
         {
-            throw new NotImplementedException();
+            
+             _db.Projects.Remove(entity);
+            await _db.SaveChangesAsync();
+            return true;
         }
 
-        public Task<Project> Get(Guid id)
+        public async Task<Project> Get(Guid id)
         {
-            throw new NotImplementedException();
+            return await _db.Projects.FirstOrDefaultAsync(x => x.Id == id);
         }
  
         public async Task<IEnumerable<Project>> Select()

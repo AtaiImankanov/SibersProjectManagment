@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ProjectsTrackerSibers.DAL\ProjectsTrackerSibers.DAL.csproj" />
+    <ProjectReference Include="..\ProjectsTrackerSibers.Domain\ProjectsTrackerSibers.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

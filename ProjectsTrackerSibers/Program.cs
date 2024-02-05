@@ -3,6 +3,8 @@ using Microsoft.EntityFrameworkCore;
 using ProjectsTrackerSibers.DAL;
 using ProjectsTrackerSibers.DAL.Interfaces;
 using ProjectsTrackerSibers.DAL.Repositories;
+using ProjectsTrackerSiber.Service.Interfaces;
+using ProjectsTrackerSiber.Service.Implementations;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +16,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 //
 builder.Services.AddScoped<IProjectRepository,ProjectRepository>();    
+builder.Services.AddScoped<IProjectService, ProjectService>();    
+
 
 // Build the service provider.
 var serviceProvider = builder.Services.BuildServiceProvider();

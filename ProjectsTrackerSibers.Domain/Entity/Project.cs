@@ -19,4 +19,5 @@ namespace ProjectsTrackerSibers.Domain.Entity
         public ICollection<TaskProj>? Tasks { get; set; } = new List<TaskProj>();
 
     }
+
 }

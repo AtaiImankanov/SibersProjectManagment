@@ -1,5 +1,4 @@
-﻿
-namespace ProjectsTrackerSibers.DAL.Interfaces
+﻿namespace ProjectsTrackerSibers.DAL.Interfaces
 {
     public interface IBaseRepository<T>
     {
@@ -7,6 +6,5 @@ namespace ProjectsTrackerSibers.DAL.Interfaces
         Task<T> Get (Guid id);
         Task<IEnumerable<T>> Select();
         Task<bool> Delete (T entity);
-
     }
 }
