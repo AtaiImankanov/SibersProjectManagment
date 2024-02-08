@@ -3,13 +3,14 @@ using ProjectsTrackerSibers.DAL.Interfaces;
 using ProjectsTrackerSibers.Domain.Entity;
 using ProjectsTrackerSibers.Domain.Response;
 using ProjectsTrackerSibers.Domain.Enums;
+using Microsoft.EntityFrameworkCore;
 
 namespace ProjectsTrackerSiber.Service.Implementations
 {
 	public class ProjectService : IProjectService
 	{
-		private readonly IProjectRepository _projectRepository;
-		public ProjectService(IProjectRepository projectRepository) {
+		private readonly IBaseRepository<Project> _projectRepository;
+		public ProjectService(IBaseRepository<Project> projectRepository) {
 			_projectRepository = projectRepository;
 		}
 		public async Task<IBaseResponse<Project>> GetProject (Guid id)
@@ -17,7 +18,7 @@ namespace ProjectsTrackerSiber.Service.Implementations
 			var baseResponce = new BaseResponse<Project>();
 			try
 			{
-				var project =await _projectRepository.Get(id);
+				var project =await _projectRepository.GetAll().FirstOrDefaultAsync(x => x.Id == id);
 				if(project == null)
 				{
 					baseResponce.Description = "Project by id not found";
@@ -42,7 +43,7 @@ namespace ProjectsTrackerSiber.Service.Implementations
 			var baseResponce= new BaseResponse<IEnumerable<Project>>();
 			try
 			{
-				var Projects = await _projectRepository.Select();
+				var Projects = await _projectRepository.GetAll().ToListAsync();
 				if (Projects.Count() == 0)
 				{
 					baseResponce.Description = "There is no elements in Projects table";
@@ -67,7 +68,7 @@ namespace ProjectsTrackerSiber.Service.Implementations
 			var baseResponce = new BaseResponse<bool>();
 			try
 			{
-                var project = await _projectRepository.Get(id);
+                var project =  await _projectRepository.GetAll().FirstOrDefaultAsync(x => x.Id == id);
                 if (project == null)
                 {
                     baseResponce.Description = "Project by id not found";
@@ -88,13 +89,13 @@ namespace ProjectsTrackerSiber.Service.Implementations
 			}
 		}
 
-		public async Task<IBaseResponse<ProjectViewModel>> CreateProject (ProjectViewModel projectViewModel)
+		public async Task<IBaseResponse<ProjectViewModel>> CreateProject(ProjectViewModel projectViewModel)
 		{
 			var baseResponce = new BaseResponse<ProjectViewModel>();
 			try
 			{
 				var project = new Project
-				{
+                {
 					Name = projectViewModel.Name,
 					PerformerCompany = projectViewModel.PerformerCompany,
 					Priority = projectViewModel.Priority,
@@ -106,7 +107,7 @@ namespace ProjectsTrackerSiber.Service.Implementations
 				};
 				await _projectRepository.Create(project);
 
-				return baseResponce;
+				return baseResponce; 
 			}
 			catch(Exception ex)
 			{
@@ -115,5 +116,10 @@ namespace ProjectsTrackerSiber.Service.Implementations
                 return baseResponce;
             }
 		}
-	}
+
+        public Task<IBaseResponse<Project>> EditProject(Guid id)
+        {
+            throw new NotImplementedException();
+        }
+    }
 }

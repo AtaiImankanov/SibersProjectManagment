@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProjectsTrackerSibers.DAL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3c96206ae3db7ca324424c5da1b0f16338146461")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cb3a41d8937ee0398596136ce5d9f30c805765b8")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProjectsTrackerSibers.DAL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProjectsTrackerSibers.DAL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

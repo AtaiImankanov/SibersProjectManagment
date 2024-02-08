@@ -5,6 +5,7 @@ using ProjectsTrackerSibers.DAL.Interfaces;
 using ProjectsTrackerSibers.DAL.Repositories;
 using ProjectsTrackerSiber.Service.Interfaces;
 using ProjectsTrackerSiber.Service.Implementations;
+using ProjectsTrackerSibers.Domain.Entity;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,7 +16,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 //
-builder.Services.AddScoped<IProjectRepository,ProjectRepository>();    
+builder.Services.AddScoped<IBaseRepository<Project>,ProjectRepository>();    
 builder.Services.AddScoped<IProjectService, ProjectService>();    
 
 

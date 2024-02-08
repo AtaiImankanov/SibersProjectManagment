@@ -3,8 +3,8 @@
     public interface IBaseRepository<T>
     {
         Task<bool> Create (T entity);
-        Task<T> Get (Guid id);
-        Task<IEnumerable<T>> Select();
+        IQueryable<T> GetAll();
         Task<bool> Delete (T entity);
+        Task<bool> Edit (T entity);
     }
 }

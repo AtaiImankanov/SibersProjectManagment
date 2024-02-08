@@ -9,7 +9,7 @@ namespace ProjectsTrackerSibers.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger, IProjectRepository ProjectRepository)
+        public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
         }
