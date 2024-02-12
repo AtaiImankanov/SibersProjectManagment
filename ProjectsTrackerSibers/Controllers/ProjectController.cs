@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ProjectsTrackerSiber.Service.Interfaces;
+using ProjectsTrackerSibers.DAL.Repositories;
 using ProjectsTrackerSibers.Domain.Entity;
 using ProjectsTrackerSibers.Domain.ViewModels;
 
@@ -66,7 +67,7 @@ namespace ProjectsTrackerSibers.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create(ProjectViewModel newItem)
+        public async Task<ActionResult> Create(СreateProjectViewModel newItem)
         {
             if (ModelState.IsValid)
             {
@@ -80,5 +81,64 @@ namespace ProjectsTrackerSibers.Controllers
             return View(newItem);
         }
 
-    }
+
+        [HttpGet]
+        public async Task<ActionResult> Edit(Guid id)
+        {
+			var project = await _projectService.GetProject(id);
+
+			if (project.Data == null)
+			{
+				return NotFound();
+			}
+			//var managers = await _managerService.GetManagers();
+
+			//// Проверяем, что список менеджеров не является null перед добавлением в ViewBag
+			//if (managers != null)
+			//{
+			//    ViewBag.Managers = managers;
+			//}
+			//else
+			//{
+			//    ViewBag.Managers = new List<Manager>(); // Если список менеджеров null, создаем пустой список
+			//}
+
+
+
+			if (project.StatusCode == Domain.Enums.StatusCode.OK)
+			{
+				var viewModel = new EditProjectViewModel
+				{
+					Id = project.Data.Id,
+					ProjectManagerId = project.Data.ProjectManagerId,
+					//ProjectManagers =managers,
+					Name = project.Data.Name,
+					PerformerCompany = project.Data.PerformerCompany,
+					CustomerCompany = project.Data.CustomerCompany,
+					StartProjDate = project.Data.StartProjDate,
+					EndtProjDate = project.Data.EndtProjDate,
+					Priority = project.Data.Priority
+				};
+				return View(viewModel);
+			}
+			return RedirectToAction("Error", project.Description);
+		}
+		[HttpPost]
+		public async Task<ActionResult> Edit(EditProjectViewModel proj)
+		{
+
+			if (ModelState.IsValid)
+			{
+				var response = await _projectService.EditProject(proj);
+				if (response.StatusCode == Domain.Enums.StatusCode.OK)
+				{
+					return RedirectToAction("Index");
+				}
+				return RedirectToAction("Error", response.Description);
+			}
+
+			return View(proj);
+
+		}
+	}
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProjectsTrackerSibers.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+28998d5c9ea8a5119c34c56bec729473c8c19e34")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+90189db2e7f53330e0b5448694a7f3b4cd901979")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProjectsTrackerSibers.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProjectsTrackerSibers.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

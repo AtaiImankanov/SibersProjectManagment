@@ -23,12 +23,13 @@ namespace ProjectsTrackerSiber.Service.Implementations
 				if(project == null)
 				{
 					baseResponce.Description = "Project by id not found";
-					//baseResponce.StatusCode
+					baseResponce.StatusCode = StatusCode.NullExeption;
 					return baseResponce;
 				}
 				else
 				{
 					baseResponce.Data= project;
+					baseResponce.StatusCode = StatusCode.OK;
 					return baseResponce;
 				}
 
@@ -90,9 +91,9 @@ namespace ProjectsTrackerSiber.Service.Implementations
 			}
 		}
 
-		public async Task<IBaseResponse<ProjectViewModel>> CreateProject(ProjectViewModel projectViewModel)
+		public async Task<IBaseResponse<СreateProjectViewModel>> CreateProject(СreateProjectViewModel projectViewModel)
 		{
-			var baseResponce = new BaseResponse<ProjectViewModel>();
+			var baseResponce = new BaseResponse<СreateProjectViewModel>();
 			try
 			{
 				var project = new Project
@@ -116,9 +117,38 @@ namespace ProjectsTrackerSiber.Service.Implementations
             }
 		}
 
-        public Task<IBaseResponse<Project>> EditProject(Guid id)
+        public async Task<IBaseResponse<bool>> EditProject(EditProjectViewModel viewModel)
         {
-            throw new NotImplementedException();
-        }
+			var baseResponce = new BaseResponse<bool>();
+			try
+			{
+				var project = await _projectRepository.GetAll().FirstOrDefaultAsync(x => x.Id == viewModel.Id);
+
+				if (project == null)
+				{
+					baseResponce.StatusCode = StatusCode.NullExeption;
+					baseResponce.Description = "there is no project like that";
+					return baseResponce;
+				}
+				project.Name = viewModel.Name;
+				project.PerformerCompany = viewModel.PerformerCompany;
+				project.CustomerCompany = viewModel.CustomerCompany;
+				project.StartProjDate = viewModel.StartProjDate;
+				project.EndtProjDate = viewModel.EndtProjDate;
+				project.Priority = viewModel.Priority;
+				project.ProjectManagerId = viewModel.ProjectManagerId;
+
+				// Сохраняем изменения в базе данных
+				baseResponce.Data=await _projectRepository.Edit(project);
+				baseResponce.StatusCode = StatusCode.OK;
+				return baseResponce;
+			}
+			catch (Exception ex)
+			{
+				baseResponce.Description = ex.Message;
+				baseResponce.StatusCode = StatusCode.InternalServerError;
+				return baseResponce;
+			}
+		}
     }
 }

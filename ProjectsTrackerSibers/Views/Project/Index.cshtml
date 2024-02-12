@@ -9,6 +9,10 @@ else
 {
 	@foreach (var proj in Model)
 	{
-		<p>@proj.Name</p>
+		<div>
+			<p>@proj.Name</p>
+			<a class="nav-link text-dark" asp-area="" asp-controller="Project" asp-action="Edit" asp-route-id="@proj.Id"></a>
+		</div>
+	
 	}
 }

@@ -1,0 +1,53 @@
+﻿@model ProjectsTrackerSibers.Domain.ViewModels.EditProjectViewModel
+
+@{
+    ViewData["Title"] = "Edit Project";
+}
+
+<h2>Edit Project</h2>
+
+<form asp-action="Edit" method="post">
+    <div class="form-group">
+        <label for="Name">Name</label>
+        <input type="text" class="form-control" id="Name" name="Name" value="@Model.Name" required>
+        <div class="invalid-feedback">Name is required</div>
+    </div>
+    
+    <div class="form-group">
+        <label for="PerformerCompany">Performer Company</label>
+        <input type="text" class="form-control" id="PerformerCompany" name="PerformerCompany" value="@Model.PerformerCompany" required>
+        <div class="invalid-feedback">Performer Company is required</div>
+    </div>
+
+    <div class="form-group">
+        <label for="CustomerCompany">Customer Company</label>
+        <input type="text" class="form-control" id="CustomerCompany" name="CustomerCompany" value="@Model.CustomerCompany" required>
+        <div class="invalid-feedback">Customer Company is required</div>
+    </div>
+
+    <div class="form-group">
+        <label for="StartProjDate">Start Date</label>
+        <input type="date" class="form-control" id="StartProjDate" name="StartProjDate" value="@Model.StartProjDate.ToString("yyyy-MM-dd")" required>
+        <div class="invalid-feedback">Start Date is required</div>
+    </div>
+
+    <div class="form-group">
+        <label for="Priority">Priority</label>
+        <input type="number" class="form-control" id="Priority" name="Priority" value="@Model.Priority" required>
+        <div class="invalid-feedback">Priority is required</div>
+    </div>
+
+@*     <div class="form-group">
+        <label for="ProjectManagerId">Project Manager</label>
+        <select class="form-control" id="ProjectManagerId" name="ProjectManagerId" required>
+            <option value="">-- Select Project Manager --</option>
+            @foreach (var manager in Model.ProjectManagers)
+            {
+                <option value="@manager.Id" @(Model.ProjectManagerId == manager.Id ? "selected" : "")>@manager.Name</option>
+            }
+        </select>
+        <div class="invalid-feedback">Project Manager is required</div>
+    </div> *@
+
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>

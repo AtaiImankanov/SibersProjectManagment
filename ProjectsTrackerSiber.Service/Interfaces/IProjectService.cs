@@ -7,9 +7,9 @@ namespace ProjectsTrackerSiber.Service.Interfaces
 	public interface IProjectService
 	{
 		 Task<IBaseResponse<IEnumerable<Project>>> GetAllProjects();
-		Task<IBaseResponse<ProjectViewModel>> CreateProject(ProjectViewModel projectViewModel);
+		Task<IBaseResponse<СreateProjectViewModel>> CreateProject(СreateProjectViewModel projectViewModel);
 		Task<IBaseResponse<bool>> DeleteProject(Guid id);
 		Task<IBaseResponse<Project>> GetProject(Guid id);
-		Task<IBaseResponse<Project>> EditProject(Guid id);
+		Task<IBaseResponse<bool>> EditProject(EditProjectViewModel projectViewModel);
 	}
 }
