@@ -1,5 +1,6 @@
 ﻿using ProjectsTrackerSibers.Domain.Entity;
 using ProjectsTrackerSibers.Domain.Response;
+using ProjectsTrackerSibers.Domain.ViewModels;
 
 namespace ProjectsTrackerSiber.Service.Interfaces
 {

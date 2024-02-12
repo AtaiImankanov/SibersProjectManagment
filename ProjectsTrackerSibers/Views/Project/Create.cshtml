@@ -1,0 +1,60 @@
+﻿@model ProjectsTrackerSibers.Domain.ViewModels.ProjectViewModel
+
+@{
+    ViewBag.Title = "Create Project";
+}
+
+<h2>Create Project</h2>
+
+
+
+<form asp-action="Create" method="post">
+
+    <div class="form-group">
+        <label asp-for="Name" class="control-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="PerformerCompany" class="control-label"></label>
+        <input asp-for="PerformerCompany" class="form-control" />
+        <span asp-validation-for="PerformerCompany" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CustomerCompany" class="control-label"></label>
+        <input asp-for="CustomerCompany" class="form-control" />
+        <span asp-validation-for="CustomerCompany" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="StartProjDate" class="control-label"></label>
+        <input asp-for="StartProjDate" class="form-control" />
+        <span asp-validation-for="StartProjDate" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Priority" class="control-label"></label>
+        <input asp-for="Priority" class="form-control" />
+        <span asp-validation-for="Priority" class="text-danger"></span>
+    </div>
+
+    <!-- Остальные поля формы для создания проекта -->
+
+    @* <div class="form-group">
+        <label for="ProjectManagerId">Project Manager</label>
+        <select class="form-control" id="ProjectManagerId" name="ProjectManagerId">
+            <option value="">-- Select Project Manager --</option>
+            @foreach (var manager in ViewBag.Managers)
+            {
+                <option value="@manager.Id">@manager.Name</option>
+            }
+        </select>
+    </div> *@
+
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </div>
+</form>
+

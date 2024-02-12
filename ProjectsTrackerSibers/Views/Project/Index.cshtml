@@ -1,6 +1,14 @@
 ﻿@model IEnumerable<ProjectsTrackerSibers.Domain.Entity.Project>
 
-@foreach(var proj in Model)
+<a class="nav-link text-dark" asp-area="" asp-controller="Project" asp-action="Create">Create proj</a>
+@if(Model is null)
 {
-	<p>@proj.Name</p>
+	<p>There is no Projects</p>
+}
+else
+{
+	@foreach (var proj in Model)
+	{
+		<p>@proj.Name</p>
+	}
 }

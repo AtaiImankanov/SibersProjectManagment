@@ -15,4 +15,5 @@ namespace ProjectsTrackerSibers.Domain.Response
         StatusCode StatusCode { get; set; }
         T Data { get; }
     }
+
 }

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using ProjectsTrackerSiber.Service.Interfaces;
 using ProjectsTrackerSibers.Domain.Entity;
+using ProjectsTrackerSibers.Domain.ViewModels;
 
 namespace ProjectsTrackerSibers.Controllers
 {
@@ -47,9 +48,37 @@ namespace ProjectsTrackerSibers.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> CreateProject()
+        public async Task<IActionResult> Create()
         {
+            //var managers = await _managerService.GetManagers();
+
+            //// Проверяем, что список менеджеров не является null перед добавлением в ViewBag
+            //if (managers != null)
+            //{
+            //    ViewBag.Managers = managers;
+            //}
+            //else
+            //{
+            //    ViewBag.Managers = new List<Manager>(); // Если список менеджеров null, создаем пустой список
+            //}
             return View();
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Create(ProjectViewModel newItem)
+        {
+            if (ModelState.IsValid)
+            {
+                var response = await _projectService.CreateProject(newItem);
+                if (response.StatusCode == Domain.Enums.StatusCode.OK)
+                {
+                    return RedirectToAction("Index");
+                }
+                return RedirectToAction("Error", response.Description);
+            }
+            return View(newItem);
+        }
+
     }
 }

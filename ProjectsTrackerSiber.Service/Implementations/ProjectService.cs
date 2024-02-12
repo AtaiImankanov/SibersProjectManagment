@@ -4,6 +4,7 @@ using ProjectsTrackerSibers.Domain.Entity;
 using ProjectsTrackerSibers.Domain.Response;
 using ProjectsTrackerSibers.Domain.Enums;
 using Microsoft.EntityFrameworkCore;
+using ProjectsTrackerSibers.Domain.ViewModels;
 
 namespace ProjectsTrackerSiber.Service.Implementations
 {
@@ -101,12 +102,10 @@ namespace ProjectsTrackerSiber.Service.Implementations
 					Priority = projectViewModel.Priority,
 					CustomerCompany = projectViewModel.CustomerCompany,
 					StartProjDate = projectViewModel.StartProjDate,
-					EndtProjDate = projectViewModel.EndtProjDate,
 					ProjectManagerId = projectViewModel.ProjectManagerId,
-					ProjectManager = projectViewModel.ProjectManager,
 				};
 				await _projectRepository.Create(project);
-
+				baseResponce.StatusCode = StatusCode.OK;
 				return baseResponce; 
 			}
 			catch(Exception ex)
