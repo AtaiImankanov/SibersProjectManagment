@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\ProjectsTrackerSiber.Service\\Implementations",
+    "\\ProjectsTrackerSibers",
+    "\\ProjectsTrackerSibers.DAL",
+    "\\ProjectsTrackerSibers.Domain",
+    "\\ProjectsTrackerSibers.Domain\\Entity"
+  ],
+  "SelectedNode": "\\ProjectsTrackerSibers.Domain\\Entity\\ApplicationUser.cs",
+  "PreviewInSolutionExplorer": false
+}

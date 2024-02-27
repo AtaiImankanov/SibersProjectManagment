@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProjectsTrackerSiber.Service")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+90189db2e7f53330e0b5448694a7f3b4cd901979")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+15ee5d04aa8268cbeb1a1a4a662f72238f9f42f9")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProjectsTrackerSiber.Service")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProjectsTrackerSiber.Service")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -10,3 +10,4 @@ D:\Projects\mvc\ProjectsTrackerSibers\ProjectsTrackerSibers.Domain\obj\Debug\net
 D:\Projects\mvc\ProjectsTrackerSibers\ProjectsTrackerSibers.Domain\obj\Debug\net8.0\ProjectsTrackerSibers.Domain.pdb
 D:\Projects\mvc\ProjectsTrackerSibers\ProjectsTrackerSibers.Domain\obj\Debug\net8.0\ref\ProjectsTrackerSibers.Domain.dll
 D:\Projects\mvc\ProjectsTrackerSibers\ProjectsTrackerSibers.Domain\obj\Debug\net8.0\ProjectsTrackerSibers.Domain.sourcelink.json
+D:\Projects\mvc\ProjectsTrackerSibers\ProjectsTrackerSibers.Domain\obj\Debug\net8.0\ProjectsTrackerSibers.Domain.csproj.AssemblyReference.cache

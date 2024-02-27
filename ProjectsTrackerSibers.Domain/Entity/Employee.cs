@@ -3,8 +3,8 @@
 namespace ProjectsTrackerSibers.Domain.Entity
 {
     [Table("Employees")]
-    public class Employee
-    {
+    public class Employee : BaseEntity
+	{
         public  Guid Id { get; set; }
         public string Name { get; set; }
         public string SurName { get; set; }

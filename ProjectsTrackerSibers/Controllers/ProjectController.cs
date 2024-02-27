@@ -16,6 +16,7 @@ namespace ProjectsTrackerSibers.Controllers
         }
 
         [HttpGet]
+
         public async Task<IActionResult> Index()
         {
             var projects = await _projectService.GetAllProjects();
@@ -36,9 +37,10 @@ namespace ProjectsTrackerSibers.Controllers
             }
             return RedirectToAction("Error", response.Description);
         }
-        [Authorize(Roles = "Admin")]
-        [HttpGet]
-        public async Task<IActionResult> DeleteProject(Guid id)
+
+
+//        [Authorize(Roles = "Admin")]        
+        public async Task<IActionResult> Delete(Guid id)
         {
             var response = await _projectService.DeleteProject(id);
             if (response.StatusCode == Domain.Enums.StatusCode.OK)
@@ -47,6 +49,7 @@ namespace ProjectsTrackerSibers.Controllers
             }
             return RedirectToAction("Error", response.Description);
         }
+
 
         [HttpGet]
         public async Task<IActionResult> Create()

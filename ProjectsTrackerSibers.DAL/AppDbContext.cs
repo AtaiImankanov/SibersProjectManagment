@@ -1,10 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ProjectsTrackerSibers.Domain.Entity;
-
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 namespace ProjectsTrackerSibers.DAL
 {
     public class AppDbContext : DbContext
-    {
+	{
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
             Database.EnsureCreated();
@@ -16,9 +17,11 @@ namespace ProjectsTrackerSibers.DAL
         public DbSet<Project> Projects { get; set; }
         public DbSet<TaskProj> Tasks { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+
+		protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<TaskProj>()
+			base.OnModelCreating(modelBuilder);
+			modelBuilder.Entity<TaskProj>()
                 .HasKey(t => t.Id);
 
             modelBuilder.Entity<TaskProj>()
@@ -39,7 +42,7 @@ namespace ProjectsTrackerSibers.DAL
 
             modelBuilder.Entity<TaskProj>()
                 .Property(t => t.Status)
-                .HasConversion<int>(); // Преобразование энумерации в int
+                .HasConversion<int>(); //enum4ик в int
 
             modelBuilder.Entity<Project>()
                 .HasKey(p => p.Id);

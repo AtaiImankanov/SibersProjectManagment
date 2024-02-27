@@ -11,8 +11,8 @@ else
 	{
 		<div>
 			<p>@proj.Name</p>
-			<a class="nav-link text-dark" asp-area="" asp-controller="Project" asp-action="Edit" asp-route-id="@proj.Id"></a>
-		</div>
-	
+			<a  asp-area="" asp-controller="Project" asp-action="Edit" asp-route-id="@proj.Id">edit</a>
+			<a asp-area="" asp-controller="Project" asp-action="Delete" asp-route-id="@proj.Id">delete</a>			
+		</div>	
 	}
 }

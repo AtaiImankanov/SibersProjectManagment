@@ -5,12 +5,15 @@ using ProjectsTrackerSibers.Domain.Response;
 using ProjectsTrackerSibers.Domain.Enums;
 using Microsoft.EntityFrameworkCore;
 using ProjectsTrackerSibers.Domain.ViewModels;
+using ProjectsTrackerSibers.DAL.Repositories;
 
 namespace ProjectsTrackerSiber.Service.Implementations
 {
 	public class ProjectService : IProjectService
 	{
 		private readonly IBaseRepository<Project> _projectRepository;
+	
+
 		public ProjectService(IBaseRepository<Project> projectRepository) {
 			_projectRepository = projectRepository;
 		}
@@ -19,7 +22,7 @@ namespace ProjectsTrackerSiber.Service.Implementations
 			var baseResponce = new BaseResponse<Project>();
 			try
 			{
-				var project =await _projectRepository.GetAll().FirstOrDefaultAsync(x => x.Id == id);
+				var project = await _projectRepository.Get(id);
 				if(project == null)
 				{
 					baseResponce.Description = "Project by id not found";
@@ -70,17 +73,18 @@ namespace ProjectsTrackerSiber.Service.Implementations
 			var baseResponce = new BaseResponse<bool>();
 			try
 			{
-                var project =  await _projectRepository.GetAll().FirstOrDefaultAsync(x => x.Id == id);
+                var project = await _projectRepository.Get(id);
                 if (project == null)
                 {
                     baseResponce.Description = "Project by id not found";
-                    //baseResponce.StatusCode
-                    return baseResponce;
+					baseResponce.StatusCode = StatusCode.NullExeption;
+					return baseResponce;
                 }
                 else
                 {	
                     baseResponce.Data =  await _projectRepository.Delete(project); ;
-                    return baseResponce;
+					baseResponce.StatusCode = StatusCode.OK;
+					return baseResponce;
                 }
             }
             catch(Exception ex)
@@ -122,9 +126,9 @@ namespace ProjectsTrackerSiber.Service.Implementations
 			var baseResponce = new BaseResponse<bool>();
 			try
 			{
-				var project = await _projectRepository.GetAll().FirstOrDefaultAsync(x => x.Id == viewModel.Id);
+				var project = await _projectRepository.Get(viewModel.Id);
 
-				if (project == null)
+                if (project == null)
 				{
 					baseResponce.StatusCode = StatusCode.NullExeption;
 					baseResponce.Description = "there is no project like that";
@@ -138,7 +142,6 @@ namespace ProjectsTrackerSiber.Service.Implementations
 				project.Priority = viewModel.Priority;
 				project.ProjectManagerId = viewModel.ProjectManagerId;
 
-				// Сохраняем изменения в базе данных
 				baseResponce.Data=await _projectRepository.Edit(project);
 				baseResponce.StatusCode = StatusCode.OK;
 				return baseResponce;
